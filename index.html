@@ -377,13 +377,22 @@
     .author-portrait {
       width: 180px;
       height: 220px;
-      background: var(--parchment);
       border: 3px solid var(--dark-brown);
       display: flex;
       align-items: center;
       justify-content: center;
       box-shadow: 5px 5px 0 var(--rust);
       flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .author-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      filter: grayscale(20%) contrast(1.05);
     }
 
     .author-portrait-inner {
@@ -678,10 +687,7 @@
   <section id="author">
     <div class="inner">
       <div class="author-portrait">
-        <div class="author-portrait-inner">
-          <div class="author-icon">🎸</div>
-          <div class="author-portrait-label">Author Photo</div>
-        </div>
+        <img src="images/erik-burton.jpg" alt="Erik Burton" class="author-photo" />
       </div>
       <div class="author-text">
         <div class="section-label">About the Author</div>
