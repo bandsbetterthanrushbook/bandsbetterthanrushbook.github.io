@@ -274,60 +274,18 @@
       align-items: center;
     }
 
-    .book-cover-mock {
-      aspect-ratio: 6/9;
-      background: var(--ink);
-      border: 4px solid var(--rust);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 2.5rem 2rem;
-      text-align: center;
+    .book-cover-wrap {
       position: relative;
       box-shadow: 8px 8px 0 var(--warm-mid);
+      display: inline-block;
+      line-height: 0;
     }
 
-    .book-cover-mock::before {
-      content: '';
-      position: absolute;
-      inset: 8px;
-      border: 1px solid rgba(192,24,42,0.25);
-      pointer-events: none;
-    }
-
-    .book-cover-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.6rem;
-      font-weight: 900;
-      color: var(--cream);
-      line-height: 1.15;
-      margin-bottom: 0.5rem;
-    }
-
-    .book-cover-author {
-      font-family: 'Special Elite', cursive;
-      color: var(--rust);
-      font-size: 0.8rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      margin-top: 1rem;
-    }
-
-    .book-cover-blank {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 1.5rem 0;
-    }
-
-    .blank-pages-hint {
-      font-family: 'Libre Baskerville', serif;
-      font-style: italic;
-      color: rgba(245, 239, 224, 0.2);
-      font-size: 0.75rem;
-      text-align: center;
+    .book-cover-img {
+      width: 100%;
+      max-width: 320px;
+      display: block;
+      border: 4px solid var(--rust);
     }
 
     .book-description p {
@@ -668,12 +626,8 @@
   <!-- ABOUT THE BOOK -->
   <div id="about-book">
     <div class="inner">
-      <div class="book-cover-mock">
-        <div class="book-cover-title">Bands<br/>Better<br/>Than Rush</div>
-        <div class="book-cover-blank">
-          <div class="blank-pages-hint">( the contents )</div>
-        </div>
-        <div class="book-cover-author">Erik Burton</div>
+      <div class="book-cover-wrap">
+        <img src="images/book-cover.png" alt="Bands Better Than Rush by Erik Burton — book cover" class="book-cover-img" />
       </div>
       <div class="book-description">
         <div class="section-label">About the Book</div>
